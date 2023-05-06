@@ -18,8 +18,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@aws-sdk/client-apigatewaymanagementapi": "^3.325.0",
-    "@aws-sdk/client-dynamodb": "^3.325.0",
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.328.0",
+    "@aws-sdk/client-dynamodb": "^3.328.0",
     "aws-lambda": "^1.0.7"
   }
 }
