@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ 
+   <head>
+      <script type = "text/javascript">
+ 
+         var ws = null;
+ 
+         function OpenWebsocket() {
+ 
+               ws = new WebSocket("ws://192.168.1.78/test");
+ 
+               ws.onopen = function() {
+                    document.getElementById("inputText").disabled = false;
+                    document.getElementById("sendButton").disabled = false;
+                    document.getElementById("connectButton").disabled = true;
+                    document.getElementById("disconnectButton").disabled = false;
+               };
+ 
+               ws.onclose = function() {
+                    document.getElementById("inputText").disabled = true;
+                    document.getElementById("sendButton").disabled = true;
+                    document.getElementById("connectButton").disabled = false;
+                    document.getElementById("disconnectButton").disabled = true;
+ 
+                    alert("Connection closed");
+               };
+         }
+ 
+         function CloseWebsocket(){
+            ws.close();
+         }
+ 
+         function SendData(){
+            var textToSend = document.getElementById("inputText").value;
+            ws.send(textToSend);
+         }
+ 
+      </script>
+ 
+   </head>
+ 
+   <body>
+      <div>
+         <button onclick = "OpenWebsocket()" id = "connectButton">CONNECT</button>
+         <button onclick = "CloseWebsocket()" disabled = "true" id = "disconnectButton">DISCONNECT</button>
+      </div>
+ 
+      <div>
+         <input type = "text" disabled = "true" id = "inputText"></input>
+         <button onclick = "SendData()"  disabled = "true" id = "sendButton">SEND</button>
+      </div>
+   </body>
+</html>
