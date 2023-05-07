@@ -1,0 +1,19 @@
+#define WIFI_SSID "Lightingson"
+#define WIFI_PASSWORD "13572460xi"
+
+void sendReceivedMessage(char* num) {
+    wsClient.sendTXT("{\"action\":\"msg\",\"type\":\"status\",\"body\":\"received!\"}");
+}
+
+SmartBin Transit
+
+"@aws-sdk/client-apigatewaymanagementapi": "^3.328.0",
+    "@aws-sdk/client-dynamodb": "^3.328.0",
+
+ap-northeast-1
+
+{outputPins.map((pin, key) => (
+            <option key={key} value={pin}>
+              GPIO{pin}
+            </option>
+          ))}
