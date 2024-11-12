@@ -1,3 +1,5 @@
+![Image](image.png)
+
 # CarCarC 🚗💨
 
 CarCarC is a smart, responsive waste collection system designed to make trash disposal more convenient and efficient in public spaces. With innovative sensors and automated features, CarCarC can navigate to designated locations, avoid obstacles, and interact with users seamlessly.
